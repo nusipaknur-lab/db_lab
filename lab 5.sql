@@ -1,3 +1,6 @@
+--  Nussip Aknur
+--  id: 25B031433
+
 DROP TABLE IF EXISTS employees;
 CREATE table employees (
     employee_id INTEGER,
@@ -67,10 +70,10 @@ INSERT INTO bookings VALUES (2, '2026-08-10', '2026-08-15', 4);
 
 DROP TABLE IF EXISTS customers CASCADE;
 CREATE TABLE customers(
-                          customer_id INTEGER NOT NULL,
-                          email TEXT NOT NULL,
-                          phone TEXT,
-                          registration_date DATE NOT NULL
+    customer_id INTEGER NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT,
+    registration_date DATE NOT NULL
 );
 
 DROP TABLE IF EXISTS inventory CASCADE;
@@ -91,10 +94,10 @@ INSERT INTO inventory VALUES (102, 'Gaming Mouse', 0, 49.99, CURRENT_TIMESTAMP);
 
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
-                      user_id INTEGER,
-                      username TEXT CONSTRAINT unique_username UNIQUE,
-                      email TEXT CONSTRAINT unique_email UNIQUE,
-                      created_at TIMESTAMP
+    user_id INTEGER,
+    username TEXT CONSTRAINT unique_username UNIQUE,
+    email TEXT CONSTRAINT unique_email UNIQUE,
+    created_at TIMESTAMP
 );
 
 DROP TABLE IF EXISTS course_enrollments CASCADE;
